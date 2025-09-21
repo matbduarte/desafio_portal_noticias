@@ -10,6 +10,22 @@
     padding-block: var(--py-md);
 }
 
+.text-2xl {
+    font: var(--h1);
+}
+
+.text-xl {
+    font: var(--h2);
+}
+
+.text-lg {
+    font: var(--h3);
+}
+
+.text-sm {
+    font: var(--texct-sm);
+}
+
 .container {
     --max-width: 360px;
     width: min(var(--max-width), 100% - var(--px-lg) * 2); /* subtract lateral padding from both sides */
@@ -48,6 +64,14 @@
 
 .grid {
     display: grid;
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 @media (width >= 80em) { /* 1280px */

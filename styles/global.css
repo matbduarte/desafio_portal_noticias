@@ -17,8 +17,8 @@
     --h2: 800 16px/140% var(--font-family);
     --h3: 800 14px/140% var(--font-family);
     --text-span: 600 14px/145% var(--font-family);
-    --text: 400 14px/160% var(--font-family);
-    --text-md: 400 16px/140% var(--font-family);
+    --text: 400 16px/140% var(--font-family);
+    --text-sm: 400 14px/160% var(--font-family);
 
     --px-lg: 1rem;
 
@@ -32,16 +32,16 @@ body {
     background-color: var(--bg-color);
 }
 
-h1 {
-    font-size: var(--h1);
+h1, h2, h3 {
+    font: inherit
 }
 
-h2 {
-    font-size: var(--h2);
+main {
+    margin-top: 40px;
 }
 
-h3 {
-    font-size: var(--h3);
+img {
+    max-width: 100%;
 }
 
 a {
@@ -49,8 +49,24 @@ a {
     color: inherit;
 }
 
+a:hover {
+    color: var(--brand-color-light);
+}
+
 ul[role="list"] {
     list-style: none;
+}
+
+.content-tag {
+    display: inline-block;
+    background-color: var(--brand-color-dark);
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    font: 500 10px/1.2 var(--font-family);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-color-primary);
+    box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
 }
 
 @media (width >=80em) {
