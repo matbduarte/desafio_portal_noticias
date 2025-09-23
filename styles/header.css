@@ -1,6 +1,7 @@
 #primary {
     div:nth-child(2) {
         margin-inline: auto;
+        width: 10rem;
     }
 
     div:nth-child(3) {
@@ -11,4 +12,35 @@
 #secondary {
     border: solid 1px var(--stroke-color);
     border-inline: none;
+}
+
+/* < 1280px */
+@media (width < 80em) {
+    #primary {
+        div:nth-child(2) {
+            width: 6.25rem;
+        }
+    }
+
+    #secondary {
+        width: 100%;
+        max-width: 22.5rem; /* 360px */
+        box-sizing: border-box;
+        overflow-x: auto; /* allow scrolling */
+        overflow-y: hidden;
+        white-space: nowrap;
+        gap: 2rem; /* 32px gap between links */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    /* hide scrollbar but keep scrollable */
+    #secondary::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* ensure links don't shrink when using flex */
+    #secondary > a {
+        flex: 0 0 auto;
+    }
 }

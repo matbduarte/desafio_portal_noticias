@@ -37,16 +37,16 @@ h1, h2, h3 {
 }
 
 main {
-    margin-block: 40px;
-    row-gap: 80px;
+    margin-block: 2.5rem;
+    row-gap: 5rem;
     column-gap: 2rem;
 
     grid-template-columns: 2fr 1.4fr;
 
     grid-template-areas: 
-    "featured featured"
-    "weekly weekly"
-    "ai aside";
+        "featured featured"
+        "weekly weekly"
+        "ai aside";
 }
 
 img {
@@ -78,13 +78,24 @@ ul[role="list"] {
     box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
 }
 
-@media (width >=80em) {
-
-    /* 1280px */
+/* < 1280px */
+@media (width < 80em) {
     :root {
-        --px-lg: 2rem;
+        --px-lg: 1rem;
 
         --py-base: 1.25rem;
         --py-md: 5rem;
+
+        main {
+            margin-block: 1rem;
+            row-gap: 2rem;
+            grid-template-columns: 1fr;
+
+            grid-template-areas: 
+            "featured"
+            "weekly"
+            "ai"
+            "aside";
+        }
     }
 }
